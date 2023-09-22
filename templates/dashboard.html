@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!--- Custom CSS --->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined"> menu </span>
+            </div>
+
+            <div class="header-left">
+            </div>
+            
+
+            <div class="header-right">
+                <span class="material-icons-outlined" onclick="showUserInfo()"> account_circle </span>
+            </div>
+        </header>
+        <!-- End Header-->
+
+        <!-- Sidebar -->
+        <aside id = "sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined"> </span> Crimalysis
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()"> close </span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item" id = "Dashboard">
+                    <span class="material-icons-outlined">dashboard</span> Dashboard
+                </li> 
+
+                <li class="sidebar-list-item" id = "report" onclick="reportCrime()">
+                    <span class="material-icons-outlined"> file_upload </span> Report Crime
+                </li> 
+                <li class="sidebar-list-item" id = "reports" onclick="getReports()" >
+                    <span class="material-icons-outlined"> poll </span> Reports
+                </li>
+                <li class="sidebar-list-item" id="contact">
+                    <span class="material-icons-outlined"> logout </span> Important Contacts 
+                </li>  
+
+                </li> 
+                <li class="sidebar-list-item" id = "denver" >
+                    <span class="material-icons-outlined"> poll </span> Denver Crime
+                </li> 
+
+                <li class="sidebar-list-item" id = "about">
+                    <span class="material-icons-outlined"> people </span> About
+                </li> 
+                <li class="sidebar-list-item" id="logout" onclick="logout()">
+                    <span class="material-icons-outlined"> logout </span> Logout 
+                </li> 
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Main Container -->
+        <main class="main-container">
+            
+            <div class="main-title">
+                <p class="font-weight-bold" align="center">Dashboard For US Crimes </p>
+            </div>
+            
+
+            <!-- Main Card -->
+            <!--
+            <div class="main-card">
+
+                <div class="card">
+                    
+                    <div class="card-inner">
+                        <p class="text-primary"> Crime Clearance Rate </p>
+                        <span class="material-icons-outlined text-blue"> inventory_2 </span>
+                    </div>
+
+                    <span class="text-primary font-weight-bold"> 40% </span>
+                </div>
+
+                <div class="card">
+                    
+                    <div class="card-inner">
+                        <p class="text-primary">Crime Rate</p>
+                        <span class="material-icons-outlined text-orange"> add_shopping_cart </span>
+                    </div>
+
+                    <span class="text-primary font-weight-bold">20%</span>
+                </div>
+
+                <div class="card">
+                    
+                    <div class="card-inner">
+                        <p class="text-primary"> Repeat Offender Rate </p>
+                        <span class="material-icons-outlined text-green"> shopping_cart </span>
+                    </div>
+
+                    <span class="text-primary font-weight-bold">5%</span>
+                </div>
+
+                <div class="card">
+                    
+                    <div class="card-inner">
+                        <p class="text-primary"> Crimes severity index </p>
+                        <span class="material-icons-outlined text-red"> notification_important </span>
+                    </div>
+
+                    <span class="text-primary font-weight-bold">56%</span>
+                </div>
+
+            </div> 
+            -->
+            <!-- End Main Card-->
+            <iframe src="https://public.tableau.com/shared/ZKHJ9YZDQ?:display_count=y&:origin=viz_share_link&:embed=y"
+            width="100%" height="100%" display="block">
+            </iframe>
+            <br><br>
+            <iframe src="https://public.tableau.com/views/ColumbusHomicides/Dashboard1?:language=en-US&:embed=y&:embed_code_version=3&:loadOrderID=4&:display_count=y&publish=yes&:origin=viz_share_link"
+            width="100%" height="100%" display="block">
+            </iframe>
+            <br><br>        
+            <iframe src="https://public.tableau.com/views/VictimizationDemographics/VictimizationDemographics?:language=en-US&:embed=y&:embed_code_version=3&:loadOrderID=3&:display_count=y&:origin=viz_share_link"
+            width="100%" height="100%" display="block" align="center">
+            </iframe>
+            
+
+            
+            
+            
+           
+
+            
+            <!--
+            <div class="charts">
+
+                <div class="charts-card">
+                    <p class="chart-title">Crime Occurred</p>
+                    <div id="bar-chart"></div>
+                </div>
+
+                <div class="charts-card">
+                    <p class="chart-title">Crime Rate</p>
+                    <div id="area-chart"></div>
+                </div>
+
+            </div> 
+        -->
+        </main>
+        <!-- End Main Container -->
+        
+    </div>    
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.39.0/apexcharts.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='scripts/dashboard.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Emergency Contacts</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+		/* Global styles */
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-color: #f5f5f5;
+			color: #333;
+			font-size: 16px;
+			line-height: 1.5;
+			overflow-x: hidden;
+		}
+
+		a {
+			color: #007bff;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		h1 {
+			color: #333;
+			font-size: 48px;
+			font-weight: 600;
+			text-align: center;
+			margin-top: 40px;
+			margin-bottom: 20px;
+			text-shadow: 1px 1px 0 #fff;
+		}
+
+		h2 {
+			color: #333;
+			font-size: 36px;
+			font-weight: 600;
+			margin-top: 40px;
+			margin-bottom: 20px;
+			text-shadow: 1px 1px 0 #fff;
+		}
+
+		p {
+			margin-bottom: 20px;
+			line-height: 1.5;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+			margin-bottom: 40px;
+		}
+
+		.col {
+			flex: 1;
+			padding: 0 10px;
+			margin-bottom: 20px;
+		}
+
+		.card {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
+
+		.card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		}
+
+		.card-header {
+			background-color: #007bff;
+			color: #fff;
+			padding: 20px;
+			font-size: 24px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			border-radius: 10px 10px 0 0;
+		}
+
+		.card-body {
+			padding: 20px;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-bottom: 20px;
+		}
+
+		th, td {
+			padding: 10px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+
+		th {
+			background-color: #f2f2f2;
+			color: #555;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		td:first-child {
+			font-weight: bold;
+		}
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Important Emergency Contacts</h1>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-phone-alt"></i> Emergency Services
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>Police</td>
+                                <td>911</td>
+                            </tr>
+                            <tr>
+                                <td>Fire</td>
+                                <td>911</td>
+                            </tr>
+                            <tr>
+                                <td>Ambulance</td>
+                                <td>911</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-hospital"></i> Hospitals
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>General Hospital</td>
+                                <td>(123) 456-7890</td>
+                            </tr>
+                            <tr>
+                                <td>Children's Hospital</td>
+                                <td>(456) 789-0123</td>
+                            </tr>
+                            <tr>
+                                <td>Psychiatric Hospital</td>
+                                <td>(789) 012-3456</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-briefcase-medical"></i> Poison Control
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>National Poison Control Center</td>
+                                <td>1-800-222-1222</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-hospital"></i> Suicide Prevention
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>National Suicide Prevention Lifeline</td>
+                                <td>1-800-273-TALK</td>
+                            </tr>
+                            <tr>
+                                <td>National Suicide Prevention Lifeline TTY</td>
+                                <td>1-800-799-4889</td>
+                            </tr>
+                            <tr>
+                                <td>National Suicide Prevention Lifeline (Spanish)</td>
+                                <td>1-888-628-9454</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-hospital"></i> National Domestic Violence
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>Hotline Number</td>
+                                <td>1-800-799-SAFE</td>
+                            </tr>
+                            <tr>
+                                <td>Text and Chat Services</td>
+                                <td>text LOVEIS to 22522 </td>
+                            </tr>
+                            <tr>
+                                <td>Local Resources</td>
+                                <td>thehotline.org</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-briefcase-medical"></i> National Human Trafficking
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>Hotline number</td>
+                                <td>1-888-373-7888</td>
+                            </tr>
+                            <tr>
+                                <td>Text and Chat services</td>
+                                <td>HELP to 233733 </td>
+                            </tr>
+                            <tr>
+                                <td>Reporting</td>
+                                <td>humantraffickinghotline.org/report-trafficking</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-phone-alt"></i> Text and Chat Services
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>Police</td>
+                                <td>911</td>
+                            </tr>
+                            <tr>
+                                <td>Fire</td>
+                                <td>911</td>
+                            </tr>
+                            <tr>
+                                <td>Ambulance</td>
+                                <td>911</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-hospital"></i> Suicide Prevention
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>National Suicide Prevention Lifeline</td>
+                                <td>1-800-273-TALK</td>
+                            </tr>
+                            <tr>
+                                <td>National Suicide Prevention Lifeline TTY</td>
+                                <td>1-800-799-4889</td>
+                            </tr>
+                            <tr>
+                                <td>National Suicide Prevention Lifeline (Spanish)</td>
+                                <td>1-888-628-9454</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-briefcase-medical"></i> Poison Control
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td>National Poison Control Center</td>
+                                <td>1-800-222-1222</td>
+                            </tr>
+                            <tr>
+                                <td>American Association of Poison Control Centers</td>
+                                <td>1-800-222-1222</td>
+                            </tr>
+                            <tr>
+                                <td>Drug and Poison Information Center</td>
+                                <td>1-800-222-1222</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        </div>
+    </div>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>

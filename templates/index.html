@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Crime in Denver: Results{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('denver') }}" method="POST">
+    <ul class = "table-dark">
+        <h4>Search by attribute: </h4>
+        <table>
+            <th>
+                <label>Crime Type:    </label><br>
+                <!-- <input type="text" id="crime-type" autocomplete=off list="crime-type" placeholder="Input here"> -->
+                <select id="crime-type" name = 'oci'>
+                    <option value="all-other-crimes">All Other Crimes</option>
+                    <option value="public-disorder">Public Disorder</option>
+                    <option value="drug-alcohol">Drugs and Alcohol</option>
+                    <option value="sexual-assault">Sexual Assault</option>
+                    <option value="other-crimes-against-persons">Other Crime Against People</option>
+                    <option value="white-collar-crime">White Collar Crime</option>
+                    <option value="traffic-accident">Traffic Accident</option>
+                    <option value="murder">Murder</option>
+                    <option value="robbery">Robbery</option>
+                    <option value="aggravated-assault">Aggravated Assault</option>
+                    <option value="burglary">Burglary</option>
+                    <option value="larceny">Larceny</option>
+                    <option value="theft-from-motor-vehicle">Theft from Motor Vehicle</option>
+                    <option value="auto-theft">Auto Theft</option>
+                    </select>
+            </th>
+            <th>
+            <label>Number of victims:    </label><br>
+            <label class="form-check-label" for="num-victims"> 
+                <input type="number" name="vc" value="1" id="num-victims">         
+            </label>
+        </th>
+        </table>
+        <br><br>
+        <h4>Include attribute: </h4>
+        <table>
+            <th>
+            <div class="form-check ">
+            <label class="form-check-label" for="incident-type"> 
+                <input class="form-check-input" type="checkbox" name="foti" value="y" id="incident-type">
+                <span class = "slider round"> </span>
+                Incident Type
+            </label>
+        </th>
+            <th>
+            <label class="form-check-label" for="location"> 
+                <input class="form-check-input" type="checkbox" name="fvc" value="y" id="victims">
+                <span class = "slider round"> </span>
+                Victims
+            </label>
+        </th>
+            <th>
+            <label class="form-check-label" for="date"> 
+                <input class="form-check-input" type="checkbox" name="ffod" value="y" id="date">
+                <span class = "slider round"> </span>
+                Date
+            </label>
+        </th>
+            <th>
+            <label class="form-check-label" for="address"> 
+                <input class="form-check-input" type="checkbox" name="fia" value="y" id="address">
+                <span class = "slider round"> </span>
+                Address
+            </label>
+        </th>
+        <th>
+            <label class="form-check-label" for="neighborhood"> 
+                <input class="form-check-input" type="checkbox" name="fni" value="y" id="neighborhood">
+                <span class = "slider round"> </span>
+                Neighborhood
+            </label>
+        </th>
+
+        </table>
+        <br><br>
+        <input type="submit" name="next" value="Next">
+        <br>
+        <br>
+        <br>
+    </div>
+    </div>
+    </ul>
+</form>
+
+<ul class = "table-dark table-responsive table-hover">
+    {% for table in tables %}
+                {{ table|safe }}
+    {% endfor %}
+</ul>
+
+<br><br>
+<!-- <div style="width: 40%; display: inline-block;"> -->
+<div class = "centered">
+
+    {{ div | safe }}
+    {{ script | safe }}
+
+</div>
+
+{% endblock %}

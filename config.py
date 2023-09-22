@@ -1,0 +1,10 @@
+api_key="AIzaSyCLh9oeS7N-_mwjnaSFjkGy9c8XQZGd7jo"
+username="abcd1234"
+password="abcd1234"
+db_name="d4g92hga4iubb3"
+user="puzufxnrdtqfop"
+db_password="a6f9100f7beb20a6e54a37a97b372a53b15e120f500409c798ef6d7d0a6fbb4f"
+host="ec2-107-21-67-46.compute-1.amazonaws.com"
+port="5432"
+mail_username='7rishi20ss@gmail.com'
+mail_password='skrplfr20'
